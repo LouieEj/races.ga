@@ -1,6 +1,6 @@
 document.write('<header class="header" id="header">\
 <nav class="nav nav-container">\
-    <a href="index.html" class="nav-logo">races<span>.cf</span></a>\
+    <a href="index.html" class="nav-logo">races<span>.ga</span></a>\
     <div class="nav-menu" id="nav-menu">\
         <ul class="nav-list">\
             <li class="nav-item">\
