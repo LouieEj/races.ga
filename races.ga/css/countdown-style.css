@@ -1,0 +1,97 @@
+/* Countdown Timer */
+.countdown-container{
+    background-size: cover;
+    background-position-y: 75%;
+    background-position-x: 30%;
+    height: 40vh;
+    border-radius:25px;
+}
+.countdown-dark{
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 40vh;
+    border-radius: 25px;
+}
+.countdown{
+    border-radius: 25px;
+    height: 30vh;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items:flex-end;
+    padding-bottom: 2em;
+}
+
+.race-name{
+    font-size: 1.8em;
+    padding-top: 0.5em;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.session-name{
+    font-size: 1em;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.container-day, .container-hour, .container-minute, .container-second{
+    color: white;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.day-label, .hour-label, .minute-label, .second-label{
+    color: gray;
+    padding: 0;
+    margin-top: 0.5em !important;
+}
+
+.sessionTitle{
+    margin-top: 1em !important;
+}
+.sessionBody{
+    margin-top: 0.2em !important;
+}
+
+/* End Countdown Timer */
+
+
+
+
+@media only screen and (min-width: 700px){
+    .countdown-container{
+    background-size:cover;
+
+    }
+    
+    .day-label, .hour-label, .minute-label, .second-label{
+        font-size: 1em;
+    }
+}
+
+
+@media only screen and (min-width: 1150px){
+    .countdown-container, .countdown-dark{
+        height: 48vh;
+        justify-content: center;
+    }
+    .countdown{
+        height: 38vh;
+    }
+
+    .container-day, .container-hour, .container-minute, .container-second{
+        font-size: 1em;
+        color: white;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --primary-logo-color: #0422e4;
+    --secondary-logo-color: #1094e0;
+
+    --primary-text-color: black;
+    --background-color: rgb(231, 231, 231);
+    --subhead-color: gray;
+    --hero-cta-color: white;
+    --table-border-color: black;
+
+    --navbar-background: white;
+    --logo-shadow-color: rgba(75, 75, 75, 0.3);
+    --dropdown-background-color: #f9f9f9;
+    --nav-text-color: black;
+}
+
+[data-theme="dark"]{    
+    --primary-text-color: white;
+    --background-color: rgb(20, 20, 20);
+    --subhead-color: gray;
+    --hero-cta-color: white;
+    --table-border-color: rgb(255, 255, 255);
+    
+    --navbar-background: black;
+    --logo-shadow-color: rgba(50, 50, 50, 0.3);
+    --dropdown-background-color: #555555;
+    --nav-text-color: white;
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--background-color);
+    margin: 3em 0 0 0;
+    font-family: 'Montserrat';
+    animation: fadein 2s;
+    color: var(--primary-text-color);
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.nav-container{
+    max-width: 100%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+.nav-menu{
+    display: flex;
+    align-content: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-background);
+    z-index: 100;
+    transform: 0.4s;
+}
+
+.nav{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo{
+    color: var(--primary-logo-color);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.nav-logo span{
+    color: var(--secondary-logo-color);
+}
+
+.nav-logo:hover{
+    transform: translateY(1px);
+}
+
+@media screen and (max-width: 800px) {
+    .nav-menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--navbar-background);
+        box-shadow: 0px -1px 12px var(--logo-shadow-color);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: 0.4s;
+    }
+    
+
+    .nav-logo{
+        width: 100vw;
+    }
+
+    .nav-logo{
+        text-align: center;
+    }
+    
+
+}
+
+.nav-list,
+.nav-link{
+    display: flex;
+}
+
+.nav-link{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25rem;
+    color: var(--nav-text-color);
+    font-weight: 600;
+}
+
+.nav-list{
+    justify-content: space-around;
+}
+
+.nav-name{
+    font-size: 0.75em;
+}
+
+.nav-icon{
+    font-size: 1.5em;
+}
+
+nav li.current a{
+    font-weight: bold;
+}
+
+body#index a#index,
+body#schedule a#schedule,
+body#standings a#standings,
+body#streams a#streams,
+body#stream1 a#streams,
+body#stream1 a#stream1,
+body#stream2 a#streams,
+body#stream2 a#stream2,
+body#stream3 a#streams,
+body#stream3 a#stream3,
+body#stream4 a#streams,
+body#stream4 a#stream4,
+body#stream5 a#streams,
+body#stream5 a#stream5,
+body#stream6 a#streams,
+body#stream6 a#stream6,
+body#stream7 a#streams,
+body#stream7 a#stream7,
+body#stream8 a#streams,
+body#stream8 a#stream8,
+body#stream9 a#streams,
+body#stream9 a#stream9,
+body#stream10 a#streams,
+body#stream10 a#stream10,
+body#mainstream a#streams,
+body#mainstream a#mainstream,
+body#mainstream2 a#streams,
+body#mainstream2 a#mainstream2,
+body#acestreams a#streams,
+body#acestreams a#acestreams
+{
+    color: var(--secondary-logo-color) !important;
+}
+
+.nav-link:hover{
+    color: var(--secondary-logo-color);
+}
+
+
+@media screen and (min-width: 800px) {
+
+    .nav-list{
+        justify-content: center;
+        column-gap: 3rem;
+    }
+
+
+    .nav-icon{
+        display: none !important;
+    }
+
+    .nav-name{
+        font-size: 1em;
+    }
+
+    .dropdown:hover + .dropdown-content, .dropdown-content:hover{
+        visibility: visible;
+    }
+}
+
+
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--navbar-background);
+    min-width: 100px;
+    margin-right: 17rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 1.2em;
+}
+
+.dropdown-content a {
+    float: none;
+    color: var(--primary-text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
